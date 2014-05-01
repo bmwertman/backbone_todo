@@ -9,6 +9,34 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+	<section id="todoapp">
+		<header id="todo">
+			<h1>Todos</h1>
+			<input type="text" id="new-todo" placeholder="What needs to be done?" autofocus>
+		</header>
+		<section id="main">
+			<input type="checkbox" id="toggle-all">
+			<label for="toggle-all">Mark all as complete</label>
+			<ul id="todo-list"></ul>
+		</section>
+		<footer id="footer"></footer>
+	</section>
+	<div id="info">
+		<p>Double-click to edit todo</p>
+	</div>
+
+	<script type="text/template" id="item-template">
+		<div class="view">
+			<input class="toggle" type="checkbox" {{completed ? 'checked' : ''}}
+			<label>{{title}}</label>
+			<button class="destroy"></button>
+		</div>
+		<input class="edit" value={{title}}>
+	</script>
+
+	<span id="todo-count">{{remaining}}</span>
+
 	<script type="text/template" id="item-template"></script>
 	<script type="text/template" id="stats-template"></script>
 	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
