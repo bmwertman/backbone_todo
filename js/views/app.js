@@ -1,6 +1,6 @@
 app = app || {}
 
-class TodoView extends Backbone.TodoView
+class AppView extends Backbone.View
 
   el: '#todoapp',
 
