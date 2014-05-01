@@ -7,4 +7,4 @@ $ ->
 			completed: false
 
 		toggle: ->
-			@save({ completed: !@get('completed') })
+			@save({ completed: not @get('completed') })

@@ -13,7 +13,7 @@ class TodoList extends Backbone.Collection
 		@without.apply( this, @completed())
 
 	nextOrder: ->
-		return 1 if !@length
+		return 1 if not @length
 		return @last().get('order') + 1
 
 	comparator: (todo) ->
